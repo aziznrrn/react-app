@@ -1,7 +1,11 @@
+import Header from "./Components/Header";
+import Navigation from "./Components/Navigation";
+
 function App() {
   return (
     <div className="App">
-      Tes 123
+      <Header />
+      <Navigation />
     </div>
   );
 }
