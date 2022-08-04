@@ -3,8 +3,9 @@ import { faHome } from '@fortawesome/free-solid-svg-icons'
 
 function Home() {
   return (
-    <div>
-      <FontAwesomeIcon icon={faHome} className="text-gray-600" /> Home?
+    <div className="flex flex-col items-center justify-center h-screen text-center text-gray-600">
+      <h1>Home</h1>
+      <p><FontAwesomeIcon icon={faHome}/> Is this really home?</p>
     </div>  
   )
 }
