@@ -9,9 +9,9 @@ import { NavLink } from "react-router-dom"
 
 function Navigation() {
   return (
-    <nav className="bg-gray-200 text-center p-2 fixed bottom-0 w-full border-t border-black">
-      <div className="md:container md:mx-auto">
-        <ul className="flex flex-row justify-between w-full">
+    <nav className="fixed bottom-0 right-0 left-0 w-full">
+      <div className="bg-gray-200 text-center border-t border-black p-2 mx-auto" style={{maxWidth: '1000px'}}>
+        <ul className="flex flex-row justify-between">
           <li className="items-center p-3">
             <NavLink exact to="/" className="text-gray-600" activeClassName="font-bold text-black">
               <FontAwesomeIcon icon={faHome}/>

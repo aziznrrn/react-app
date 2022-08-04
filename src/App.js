@@ -13,7 +13,7 @@ import {
 
 function App() {
   return (
-    <div className="App">
+    <div className="mx-auto" style={{maxWidth: '1000px'}}>
       <Header />
       <Router>
         <Navigation />
