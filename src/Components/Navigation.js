@@ -19,19 +19,19 @@ function Navigation() {
             </NavLink>
           </li>
           <li className="items-center p-3">
-            <NavLink to="contact" className="text-gray-600" activeClassName="font-bold text-black">
+            <NavLink to="/contact" className="text-gray-600" activeClassName="font-bold text-black">
               <FontAwesomeIcon icon={faAddressBook}/>
               <span className="mx-1">Contact</span>
             </NavLink>
           </li>
           <li className="items-center p-3">
-            <NavLink to="faq" className="text-gray-600" activeClassName="font-bold text-black">
+            <NavLink to="/faq" className="text-gray-600" activeClassName="font-bold text-black">
               <FontAwesomeIcon icon={faQuestionCircle}/>
               <span className="mx-1">FAQ</span>
             </NavLink>
           </li>
           <li className="items-center p-3">
-            <NavLink to="setting" className="text-gray-600" activeClassName="font-bold text-black">
+            <NavLink to="/setting" className="text-gray-600" activeClassName="font-bold text-black">
               <FontAwesomeIcon icon={faGear}/>
               <span className="mx-1">Setting</span>
             </NavLink>
