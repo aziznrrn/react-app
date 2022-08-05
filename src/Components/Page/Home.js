@@ -12,7 +12,7 @@ function Home() {
 
   if (posts.data) {
     return (
-      <div className="p-4" style={{marginBottom: '4.5rem'}}>
+      <div className="p-4">
         <h1 className="text-center font-bold mb-3">Home Page</h1>
         <ul>
           {posts.data.map(post => (

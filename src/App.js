@@ -14,10 +14,9 @@ import {
 
 function App() {
   return (
-    <div className="mx-auto" style={{maxWidth: '1000px'}}>
+    <div className="mx-auto h-full" style={{maxWidth: '1000px', marginBottom: '4.5rem', marginTop: '3.5rem'}}>
       <Header />
       <Router>
-        <Navigation />
         <Switch>
           <Route path="/" exact>
             <Home />
@@ -38,6 +37,7 @@ function App() {
             <NotFound />
           </Route>
         </Switch>
+        <Navigation />
       </Router>
     </div>
   );

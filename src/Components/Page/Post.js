@@ -12,7 +12,7 @@ function Post() {
 
   if (post.data) {
     return (
-      <div className="p-4 text-gray-600" style={{marginBottom: '4.5rem'}}>
+      <div className="p-4 text-gray-600">
         <h2 className="font-bold mb-3">{post.data.title}</h2>
         <p>{post.data.body}</p>
       </div>
