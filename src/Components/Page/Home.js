@@ -1,17 +1,18 @@
 import { useEffect, useState } from 'react'
+import { Link } from 'react-router-dom'
 
 function Home() {
-  const url = 'https://jsonplaceholder.typicode.com/posts?_limit=10'
+  const url = 'https://jsonplaceholder.typicode.com/posts'
   const [posts, setPosts] = useState([])
 
   useEffect(() => {
-    fetch(url)
+    fetch(`${url}?_limit=10`)
     .then(res => res.json())
-    .then(data => {console.log(data); setPosts(data)})
+    .then(data => setPosts(data))
     .catch(err => {
       console.log(err)
     })
-  } , [url])
+  }, [url])
 
   if (posts) {
     return (
@@ -21,13 +22,13 @@ function Home() {
           {posts.map(post => (
             <li key={post.id} className="mb-3">
               <div className="text-gray-600 shadow-sm rounded p-4 border-black border">
-              <h1 className="font-bold">{post.title}</h1>
+              <Link to={`/${post.id}`} class="font-bold">{post.title}</Link>
               <p>{post.body.substring(0, 300)}...</p>
               </div>
             </li>
           ))}
-      </ul>
-    </div>
+        </ul>
+      </div>
     )
   }
 

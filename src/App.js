@@ -5,6 +5,7 @@ import Faq from "./Components/Page/Faq";
 import Setting from "./Components/Page/Setting";
 import Contact from "./Components/Page/Contact";
 import NotFound from "./Components/Page/NotFound";
+import Post from "./Components/Page/Post";
 import {
   BrowserRouter as Router,
   Switch,
@@ -20,6 +21,9 @@ function App() {
         <Switch>
           <Route path="/" exact>
             <Home />
+          </Route>
+          <Route path="/post/:id">
+            <Post />
           </Route>
           <Route path="/faq">
             <Faq />
