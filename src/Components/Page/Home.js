@@ -1,34 +1,12 @@
-import { useEffect, useState } from 'react'
 import { Link } from 'react-router-dom'
+import useFetchGet from '../../Hooks/useFetchGet'
 import Loader from '../Loader'
 import NotFound from './NotFound'
 
 function Home() {
-  const url = 'https://jsonplaceholder.typicode.com/posts'
-  const [posts, setPosts] = useState({
-    loading: false,
-    data: null,
-  })
+  const url = 'https://jsonplaceholder.typicode.com/posts?_limit=10'
 
-  useEffect(() => {
-    setPosts({
-      loading: true,
-      data: null,
-    })
-
-    fetch(`${url}?_limit=10`)
-    .then(res => res.json())
-    .then(data => {
-      if (data.length === 0) data = null
-      setPosts({
-        loading: false,
-        data
-      })
-    })
-    .catch(err => {
-      console.log(err)
-    })
-  }, [url])
+  let posts = useFetchGet(url)
 
   if (posts.loading) return <Loader />
 
