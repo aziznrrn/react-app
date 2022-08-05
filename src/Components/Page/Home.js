@@ -42,7 +42,7 @@ function Home() {
               <div className="text-gray-600 shadow-sm rounded p-4 border-black border">
               <Link
                 to={`post/${post.id}`}
-                className="font-bold hover:text-blue-500 active:bg-gray-100 active:p-3 focus:text-blue-600">
+                className="font-bold hover:text-blue-500 active:bg-gray-100 focus:text-blue-600">
                 {post.title}
               </Link>
               <p>{post.body.substring(0, 300)}...</p>
